@@ -27,9 +27,13 @@ def navigate(request):
 
 
 def removepunc(request):
+    # Get the Text
+    djtext = request.GET.get('text','default')                # Statement to get the values of the textarea and if not found then take default value
+    print(djtext)
     a = '''<h1>Remove Punctuations</h1>
     <a href="http://127.0.0.1:8000/" ><button>Home</button></a>
     '''
+    # Analyze the Text
     return HttpResponse(a)
 
 def capitalizefirst(request):
