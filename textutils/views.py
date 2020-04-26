@@ -1,17 +1,20 @@
 # I have created this file - Anubhav Madhav
 
 from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
-    home = '''<h1> Home <h1>
-    <a href="http://127.0.0.1:8000/removepunc">Remove Punctuations</a><br>
-    <a href="http://127.0.0.1:8000/capitalizefirst">Capitalize First</a><br>
-    <a href="http://127.0.0.1:8000/newlineremove">Remove New Line</a><br>
-    <a href="http://127.0.0.1:8000/spaceremove">Remove Space</a><br>
-    <a href="http://127.0.0.1:8000/charcount">Count Characters</a><br>
-    '''
-    return HttpResponse(home)
+    params = {'name':'Anubhav', 'place':'India'}            # We can use dictionary to use variables in templates.
+    return render(request, 'index.html', params)            # passed the dictionary as 3rd argument
+    # home = '''<h1> Home <h1>
+    # <a href="http://127.0.0.1:8000/removepunc">Remove Punctuations</a><br>
+    # <a href="http://127.0.0.1:8000/capitalizefirst">Capitalize First</a><br>
+    # <a href="http://127.0.0.1:8000/newlineremove">Remove New Line</a><br>
+    # <a href="http://127.0.0.1:8000/spaceremove">Remove Space</a><br>
+    # <a href="http://127.0.0.1:8000/charcount">Count Characters</a><br>
+    # '''
+    # return HttpResponse(home)
 
 def navigate(request):
     nav = '''<h1>Navigate</h1>
