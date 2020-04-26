@@ -11,7 +11,7 @@
     <title>TextUtils</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">TextUtils</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,8 @@
 </div>
     <h1 style="text-align:center;">Welcome to Text-Analyzer!!</h1>
 <div class="container">
-    <form action='\analyze' method='get'>
+    <form action='\analyze' method='post'> {% csrf_token %}
+        <!-- Added CSRF Token because we are using POST Method now -->
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Enter your Text here and let the TextUtils do the Magic</label>
     <textarea class="form-control" name='text' id="exampleFormControlTextarea1" rows="10"></textarea>

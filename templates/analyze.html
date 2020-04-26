@@ -11,7 +11,7 @@
     <title>TextUtils</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">TextUtils</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -44,14 +44,16 @@
 <div class="container">
     <h1>Your Analyzed Text  </h1>
     <br>
-    <h4>{{ purpose }}</h4>
+ <h4> {{ purpose }}</h4>
+
 <br>
 <!--<h2>Analyzed Text is :</h2>-->
 <br>
 <h3 style="text-align:center;">Analyzed Text:</h3>
     <br>
     <br>
-   <h1 style="text-align:center;"> {{ analyzed_text }}</h1>
+    <!-- Added <pre> tag to avoid the automatic feature of HTML to chop off all extra spaces and newline-->
+   <h1 style="text-align:center;"> <pre>{{ analyzed_text }}</pre></h1>
 </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
