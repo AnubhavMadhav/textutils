@@ -22,8 +22,4 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('navigate', views.navigate, name='navigate'),
     path('analyze', views.analyze, name='analyze'),
-    # path('capitalizefirst', views.capitalizefirst, name='capitalizefirst'),
-    # path('newlineremove', views.newlineremove, name='newlineremove'),
-    # path('spaceremove', views.spaceremove, name='spaceremove'),
-    # path('charcount', views.charcount, name='charcount'),
 ]
